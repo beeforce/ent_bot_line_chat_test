@@ -43,15 +43,15 @@ function handleMessageEvent(event) {
 function handleImagemapMessageEvent(event) {
   var msg = {
     "type": "imagemap",
-    "baseUrl": "https://example.com/bot/images/rm001",
+    "baseUrl": "https://via.placeholder.com/300",
     "altText": "This is an imagemap",
     "baseSize": {
         "width": 1040,
         "height": 1040
     },
     "video": {
-        "originalContentUrl": "https://example.com/video.mp4",
-        "previewImageUrl": "https://example.com/video_preview.jpg",
+        "originalContentUrl": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+        "previewImageUrl": "https://via.placeholder.com/300",
         "area": {
             "x": 0,
             "y": 0,
@@ -59,14 +59,14 @@ function handleImagemapMessageEvent(event) {
             "height": 585
         },
         "externalLink": {
-            "linkUri": "https://example.com/see_more.html",
+            "linkUri": "https://google.com/",
             "label": "See More"
         }
     },
     "actions": [
         {
             "type": "uri",
-            "linkUri": "https://example.com/",
+            "linkUri": "https://google.com/",
             "area": {
                 "x": 0,
                 "y": 586,
