@@ -33,7 +33,7 @@ function handleEvent(event) {
 function handleMessageEvent(event) {
   var msg = {
     type: event.message.type,
-    text: event.message.text
+    text: "this is text"
   }
   return client.replyMessage(event.replyToken, msg);
 }
