@@ -23,17 +23,18 @@ app.post('/webhook', line.middleware(config), (req, res) => {
 
 function handleEvent(event) {
   console.log(event);
-  if(event.type === 'message' && event.message.type === 'text') {
+  if(event.type === 'message') {
     handleMessageEvent(event);
-  }else {
+  }
+  else {
     return Promise.resolve(null)
   }
 }
 
 function handleMessageEvent(event) {
   var msg = {
-    type: event.message.type,
-    text: "this is text"
+    type: "text",
+    text: "this is"+ event.message.type
   }
   return client.replyMessage(event.replyToken, msg);
 }
