@@ -75,11 +75,6 @@ function handleImagemapMessageEvent(event) {
                     "type": "message",
                     "label": "Buy",
                     "text": "action=buy&itemid=111"
-                },
-                {
-                    "type": "message",
-                    "label": "Add to cart",
-                    "text": "action=add&itemid=111"
                 }
             ]
             }
