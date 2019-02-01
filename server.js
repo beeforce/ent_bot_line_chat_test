@@ -24,7 +24,7 @@ app.post('/webhook', line.middleware(config), (req, res) => {
 function handleEvent(event) {
   console.log(event);
   if(event.type === 'message') {
-    handleMessageEvent(event);
+    // handleMessageEvent(event);
     handleImagemapMessageEvent(event);
   }
   else {
@@ -42,50 +42,26 @@ function handleMessageEvent(event) {
 
 function handleImagemapMessageEvent(event) {
   var msg = {
-    "type": "imagemap",
-    "baseUrl": "https://via.placeholder.com/300",
-    "altText": "This is an imagemap",
-    "baseSize": {
-        "width": 1040,
-        "height": 1040
-    },
-    "video": {
-        "originalContentUrl": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
-        "previewImageUrl": "https://via.placeholder.com/300",
-        "area": {
-            "x": 0,
-            "y": 0,
-            "width": 1040,
-            "height": 585
-        },
-        "externalLink": {
-            "linkUri": "https://google.com/",
-            "label": "See More"
-        }
-    },
-    "actions": [
-        {
-            "type": "uri",
-            "linkUri": "https://google.com/",
-            "area": {
-                "x": 0,
-                "y": 586,
-                "width": 520,
-                "height": 454
+    type: "template",
+    altText: "this is a confirm template",
+    template: {
+        type: "confirm",
+        text: "Are you sure?",
+        actions: [
+            {
+              type: "message",
+              label: "Yes",
+              text: "yes"
+            },
+            {
+              type: "message",
+              label: "No",
+              text: "no"
             }
-        },
-        {
-            "type": "message",
-            "text": "Hello",
-            "area": {
-                "x": 520,
-                "y": 586,
-                "width": 520,
-                "height": 454
-            }
-        }
-    ]
+        ]
+    }
   }
+  
   return client.replyMessage(event.replyToken, msg);
 }
 
