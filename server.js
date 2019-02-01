@@ -53,16 +53,14 @@ function handleImagemapMessageEvent(event) {
               "title": "this is menu",
               "text": "description",
               "actions": [
-                  {
-                      "type": "message",
-                      "label": "Buy",
-                      "text": "action=buy&itemid=111"
+                  {  
+                      "type":"cameraRoll",
+                      "label":"Camera roll"
                   },
-                  {
-                      "type": "message",
-                      "label": "Add to cart",
-                      "text": "action=add&itemid=111"
-                  }
+                  {  
+                    "type":"location",
+                    "label":"Location"
+                 }
               ]
             },
             {
@@ -72,15 +70,18 @@ function handleImagemapMessageEvent(event) {
               "text": "description",
               "actions": [
                 {
-                    "type": "message",
-                    "label": "Buy",
-                    "text": "action=buy&itemid=111"
+                  "type":"datetimepicker",
+                  "label":"Select date",
+                  "data":"storeId=12345",
+                  "mode":"datetime",
+                  "initial":"2017-12-25t00:00",
+                  "max":"2018-01-24t23:59",
+                  "min":"2017-12-25t00:00"
                 },
-                {
-                    "type": "message",
-                    "label": "Add to cart",
-                    "text": "action=add&itemid=111"
-                }
+                {  
+                  "type":"camera",
+                  "label":"Camera"
+               }
             ]
             }
         ],
