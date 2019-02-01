@@ -43,32 +43,59 @@ function handleMessageEvent(event) {
 function handleImagemapMessageEvent(event) {
   var msg = {
     "type": "template",
-    "altText": "This is a buttons template",
+    "altText": "this is a carousel template",
     "template": {
-        "type": "buttons",
-        "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/line/images/b/bb/2015-brown.png/revision/latest?cb=20150808131630",
-        "imageAspectRatio": "rectangle",
-        "imageSize": "cover",
-        "imageBackgroundColor": "#FFFFFF",
-        "title": "Menu",
-        "text": "Please select",
-        "actions": [
+        "type": "carousel",
+        "columns": [
             {
-              "type": "message",
-              "label": "EIEI",
-              "text": "dasdas"
+              "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/line/images/b/bb/2015-brown.png/revision/latest?cb=20150808131630",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "this is menu",
+              "text": "description",
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "Buy",
+                      "text": "action=buy&itemid=111"
+                  },
+                  {
+                      "type": "message",
+                      "label": "Add to cart",
+                      "text": "action=add&itemid=111"
+                  },
+                  {
+                      "type": "uri",
+                      "label": "View detail",
+                      "uri": "http://google.com"
+                  }
+              ]
             },
             {
-              "type": "message",
-              "label": "EIEI2",
-              "text": "dasdasadsdasdasdas"
-            },
-            {
-              "type": "uri",
-              "label": "View detail",
-              "uri": "http://google.com"
+              "thumbnailImageUrl": "https://c.76.my/Malaysia/line-brown-bear-cute-pencil-case-ubiyo-1802-02-Ubiyo@6.jpg",
+              "imageBackgroundColor": "#000000",
+              "title": "this is menu",
+              "text": "description",
+              "actions": [
+                {
+                    "type": "message",
+                    "label": "Buy",
+                    "text": "action=buy&itemid=111"
+                },
+                {
+                    "type": "message",
+                    "label": "Add to cart",
+                    "text": "action=add&itemid=111"
+                },
+                {
+                    "type": "uri",
+                    "label": "View detail",
+                    "uri": "http://google.com"
+                }
+            ]
             }
-        ]
+        ],
+        "imageAspectRatio": "rectangle",
+        "imageSize": "cover"
     }
   }
   
