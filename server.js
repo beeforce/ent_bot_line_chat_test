@@ -42,21 +42,31 @@ function handleMessageEvent(event) {
 
 function handleImagemapMessageEvent(event) {
   var msg = {
-    type: "template",
-    altText: "this is a confirm template",
-    template: {
-        type: "confirm",
-        text: "Are you sure?",
-        actions: [
+    "type": "template",
+    "altText": "This is a buttons template",
+    "template": {
+        "type": "buttons",
+        "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/line/images/b/bb/2015-brown.png/revision/latest?cb=20150808131630",
+        "imageAspectRatio": "rectangle",
+        "imageSize": "cover",
+        "imageBackgroundColor": "#FFFFFF",
+        "title": "Menu",
+        "text": "Please select",
+        "actions": [
             {
-              type: "message",
-              label: "Yes",
-              text: "yes"
+              "type": "message",
+              "label": "EIEI",
+              "text": "dasdas"
             },
             {
-              type: "message",
-              label: "No",
-              text: "no"
+              "type": "message",
+              "label": "EIEI2",
+              "text": "dasdasadsdasdasdas"
+            },
+            {
+              "type": "uri",
+              "label": "View detail",
+              "uri": "http://google.com"
             }
         ]
     }
