@@ -62,11 +62,6 @@ function handleImagemapMessageEvent(event) {
                       "type": "message",
                       "label": "Add to cart",
                       "text": "action=add&itemid=111"
-                  },
-                  {
-                      "type": "uri",
-                      "label": "View detail",
-                      "uri": "http://google.com"
                   }
               ]
             },
@@ -85,11 +80,6 @@ function handleImagemapMessageEvent(event) {
                     "type": "message",
                     "label": "Add to cart",
                     "text": "action=add&itemid=111"
-                },
-                {
-                    "type": "uri",
-                    "label": "View detail",
-                    "uri": "http://google.com"
                 }
             ]
             }
